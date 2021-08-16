@@ -1,23 +1,14 @@
 .search {
   padding: 13px;
-
   width: 50vw;
-
   outline: none;
   border: none;
-
   font-size: 16px;
   border-radius: 5px;
 }
 
-/* fieldset {
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  margin: 0 0.5rem 2rem 0.5rem;
-  background: white;
+@media only screen and (max-width: 650px) {
+  .search {
+    width: 90vw;
+  }
 }
-
-legend {
-  font-weight: bold;
-  padding: 0px 10px 0px 10px;
-} */

@@ -16,8 +16,8 @@
   background: url(https://source.unsplash.com/1600x900/?nature);
   background-size: cover;
   width: 100vw;
-  height: 34vh;
-  justify-content: space-evenly;
+  height: 50vh;
+  justify-content: flex-start;
   flex-direction: column;
   align-items: center;
 }
@@ -31,6 +31,7 @@
 h1 {
   color: rgb(148, 194, 235);
   text-shadow: 3px 4px rgb(17, 17, 17);
+  margin: 4rem;
 }
 .drag-btn {
   border-radius: 5px;

@@ -6,6 +6,7 @@ import { Item } from "./components/item/item.component";
 import { Popup } from "./components/popup/popup.component";
 import { Dnd } from "./components/dnd/dnd.component";
 import InfiniteScroll from "react-infinite-scroll-component";
+import { Loader } from "./components/loader/loader.component";
 
 import "./App.css";
 
@@ -15,7 +16,7 @@ class App extends Component {
     this.state = {
       photos: [],
       page: 0,
-      more: true,
+      more: false,
       searchField: "",
       searchValue: "",
       apiUrl: "https://pixabay.com/api",
@@ -24,18 +25,8 @@ class App extends Component {
       showModal: false,
       rotId: 0,
       modalId: 0,
-      dragId: 0,
-      // draggedImg: undefined,
-      // dragIndexX: 0,
-      // dragPos: {
-      //   x: [0, 0],
-      //   y: [0, 0],
-      // },
       draggable: false,
       startPhoto: undefined,
-      // imgWidth: 0,
-      // imgHeight: 0,
-      // itemsBorder: [0, 0],
     };
   }
   debounceEvent(...args) {
@@ -55,11 +46,10 @@ class App extends Component {
     if (val === "") {
       this.setState({ photos: [], page: 0 });
     } else {
-      console.log(event.target.value);
       this.setState({ searchValue: val, page: 1 });
 
       fetch(
-        `${this.state.apiUrl}/?key=${this.state.apiKey}&q=${this.state.searchValue}&image_type=photo&page=${this.state.page}&per_page=20`
+        `${this.state.apiUrl}/?key=${this.state.apiKey}&q=${this.state.searchValue}&image_type=photo&page=${this.state.page}&per_page=30`
       )
         .then((res) => res.json())
         .then((data) => {
@@ -68,6 +58,7 @@ class App extends Component {
           }
           return this.setState({
             photos: data.hits,
+            more: true,
             page: this.state.page + 1,
           });
         })
@@ -96,7 +87,7 @@ class App extends Component {
     let arr = this.state.photos;
     let moreData = arr;
     fetch(
-      `${this.state.apiUrl}/?key=${this.state.apiKey}&q=${this.state.searchValue}&image_type=photo&page=${this.state.page}&per_page=20`
+      `${this.state.apiUrl}/?key=${this.state.apiKey}&q=${this.state.searchValue}&image_type=photo&page=${this.state.page}&per_page=30`
     )
       .then((res) => {
         if (!res.ok)
@@ -138,12 +129,10 @@ class App extends Component {
     this.setState({ photos: arr });
   };
 
-  toggleDraggable = (photo) => {
-    console.log(this.state.draggable);
+  toggleDraggable = () => {
     let updateDrag = !this.state.draggable;
     this.setState({
       draggable: updateDrag,
-      dragId: photo.id,
     });
   };
   dndUpdateChanges = (images, flag) =>
@@ -225,12 +214,7 @@ class App extends Component {
           dataLength={images.length} //This is important field to render the next data
           next={this.fetchImages}
           hasMore={this.state.more}
-          loader={<h4>Loading...</h4>}
-          endMessage={
-            <p style={{ textAlign: "center" }}>
-              <b>Yay! You have seen it all</b>
-            </p>
-          }
+          loader={<Loader />}
         >
           {this.state.searchField.length > 0 ? (
             <ItemList photos={images} />

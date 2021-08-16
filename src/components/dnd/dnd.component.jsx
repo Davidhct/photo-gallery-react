@@ -66,11 +66,11 @@ export class Dnd extends Component {
         },
         imgWidth: imgWidth,
         imgHeight: imgHeight,
-        itemsBorder: [window.innerWidth, 360],
+        itemsBorder: window.innerWidth,
       };
     });
   };
-
+  //this.state.itemsBorder[1] <= e.changedTouches[0].clientY &&
   onTouchMove = (e) => {
     if (e.cancelable) e.preventDefault();
 
@@ -83,9 +83,8 @@ export class Dnd extends Component {
 
     e.target.offsetParent.style.position = "fixed";
     condition =
-      this.state.itemsBorder[0] - imgWidthCenter / 2 >=
+      this.state.itemsBorder - imgWidthCenter / 2 >=
         e.changedTouches[0].clientX &&
-      this.state.itemsBorder[1] <= e.changedTouches[0].clientY &&
       e.changedTouches[0].clientX - imgWidthCenter >= -10;
 
     if (condition) {
@@ -99,8 +98,7 @@ export class Dnd extends Component {
         let down = prevState.dragPos.y[1];
 
         let draggedIndex = prevState.dragIndex;
-        // console.log(draggedIndex);
-        // console.log(this.state.itemsBorder[0], ", ", this.state.itemsBorder[1]);
+
         let pageWidth = Math.floor(window.innerWidth / imgWidth);
 
         if (posX >= left) {
@@ -205,45 +203,3 @@ export class Dnd extends Component {
     );
   }
 }
-// export const Dnd = (props) => (
-//   <div className="item">
-//     <img
-//       id={props.id}
-//       index={props.index}
-//       src={`${props.photo.largeImageURL}`}
-//       alt="img"
-//       className="image"
-//       style={props.rotateStyle}
-//       onDragStart={props.handleOnDrag}
-//       onDrop={props.handleOnDrop}
-//       onDragOver={props.handleOnDragOver}
-//       onTouchStart={props.onTouchStart}
-//       onTouchEnd={props.onTouchEnd}
-//       onTouchMove={props.onTouchMove}
-//     />
-//     <div className="image-footer">
-//       <img
-//         id={props.id}
-//         src={deleteBtn}
-//         alt="delete icon"
-//         className="delete-icon"
-//         onClick={props.handleDeleteClick}
-//       />
-//       <img
-//         id={props.id}
-//         src={expandBtn}
-//         alt="expand icon"
-//         className="expand-icon"
-//         onClick={props.handleExpandClick}
-//       />
-
-//       <img
-//         id={props.id}
-//         src={rotateBtn}
-//         alt="rotate icon"
-//         className="rotate-icon"
-//         onClick={props.handleRotateClick}
-//       />
-//     </div>
-//   </div>
-// );
