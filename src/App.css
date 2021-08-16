@@ -1,0 +1,50 @@
+.App {
+  /* display: flex;
+  /* text-align: center; */
+  /*flex-direction: column;
+  justify-content: revert;
+  align-items: center;
+  margin: 1rem 0.3rem 1rem 0.3rem;
+  width: 100vw; */
+  display: flex;
+  /* text-align: center; */
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  background: url(https://source.unsplash.com/1600x900/?nature);
+  background-size: cover;
+  width: 100vw;
+  height: 34vh;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+}
+
+.head-section {
+  display: flex;
+  align-items: center;
+
+  justify-content: center;
+}
+h1 {
+  color: rgb(148, 194, 235);
+  text-shadow: 3px 4px rgb(17, 17, 17);
+}
+.drag-btn {
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  padding: 0.5rem;
+
+  cursor: pointer;
+  margin-right: 2rem;
+  width: 55px;
+}
+.draggable-btn {
+  background: rgb(52, 174, 52);
+}
+.not-draggable-btn {
+  background: rgb(241, 89, 89);
+}

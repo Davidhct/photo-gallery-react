@@ -1,0 +1,43 @@
+.item {
+  display: flex;
+  position: relative;
+  /* width: max-content; */
+  margin: 0.1rem 0.25rem;
+  width: calc(10- -56px);
+  flex-grow: 1;
+  background: #80808024;
+  width: -moz-max-content;
+  justify-content: center;
+}
+
+.image {
+  width: 150px;
+  height: 150px;
+
+  margin: 0.1rem 0.25rem;
+}
+
+.image-footer {
+  display: flex;
+  padding-top: 0.1rem;
+  background: rgb(0 0 0 / 54%);
+  height: 27px;
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+  /* background: black; */
+  /* left: 4px; */
+  bottom: 0px;
+  justify-content: space-around;
+}
+
+.rotate-icon,
+.expand-icon,
+.delete-icon,
+.drag-icon {
+  cursor: pointer;
+  background: none;
+  outline: none;
+  /* width: 20px;
+  margin-left: 1rem; */
+}

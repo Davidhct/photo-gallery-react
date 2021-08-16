@@ -1,0 +1,13 @@
+.item-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  /* margin: 10px 15px 0 10px; */
+  /* width: 60%; */
+  /* max-width: 1800px;
+  padding: 0 20px;
+  
+  width: calc(100% - 25px); */
+  /* border: solid; */
+}
