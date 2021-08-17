@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/photo-gallery-react/static/css/main.f39bc814.chunk.css",
-    "main.js": "/photo-gallery-react/static/js/main.6899b09b.chunk.js",
-    "main.js.map": "/photo-gallery-react/static/js/main.6899b09b.chunk.js.map",
-    "runtime-main.js": "/photo-gallery-react/static/js/runtime-main.07b2deab.js",
-    "runtime-main.js.map": "/photo-gallery-react/static/js/runtime-main.07b2deab.js.map",
-    "static/js/2.93247105.chunk.js": "/photo-gallery-react/static/js/2.93247105.chunk.js",
-    "static/js/2.93247105.chunk.js.map": "/photo-gallery-react/static/js/2.93247105.chunk.js.map",
-    "static/js/3.505c5282.chunk.js": "/photo-gallery-react/static/js/3.505c5282.chunk.js",
-    "static/js/3.505c5282.chunk.js.map": "/photo-gallery-react/static/js/3.505c5282.chunk.js.map",
+    "main.js": "/photo-gallery-react/static/js/main.041e2faf.chunk.js",
+    "main.js.map": "/photo-gallery-react/static/js/main.041e2faf.chunk.js.map",
+    "runtime-main.js": "/photo-gallery-react/static/js/runtime-main.bc085d85.js",
+    "runtime-main.js.map": "/photo-gallery-react/static/js/runtime-main.bc085d85.js.map",
+    "static/js/2.6e7cefa7.chunk.js": "/photo-gallery-react/static/js/2.6e7cefa7.chunk.js",
+    "static/js/2.6e7cefa7.chunk.js.map": "/photo-gallery-react/static/js/2.6e7cefa7.chunk.js.map",
+    "static/js/3.e5a45e83.chunk.js": "/photo-gallery-react/static/js/3.e5a45e83.chunk.js",
+    "static/js/3.e5a45e83.chunk.js.map": "/photo-gallery-react/static/js/3.e5a45e83.chunk.js.map",
     "index.html": "/photo-gallery-react/index.html",
     "static/css/main.f39bc814.chunk.css.map": "/photo-gallery-react/static/css/main.f39bc814.chunk.css.map",
-    "static/js/2.93247105.chunk.js.LICENSE.txt": "/photo-gallery-react/static/js/2.93247105.chunk.js.LICENSE.txt",
+    "static/js/2.6e7cefa7.chunk.js.LICENSE.txt": "/photo-gallery-react/static/js/2.6e7cefa7.chunk.js.LICENSE.txt",
     "static/media/drag_icon.bc37ff04.png": "/photo-gallery-react/static/media/drag_icon.bc37ff04.png",
     "static/media/rotate_icon.1b44ac46.png": "/photo-gallery-react/static/media/rotate_icon.1b44ac46.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.07b2deab.js",
-    "static/js/2.93247105.chunk.js",
+    "static/js/runtime-main.bc085d85.js",
+    "static/js/2.6e7cefa7.chunk.js",
     "static/css/main.f39bc814.chunk.css",
-    "static/js/main.6899b09b.chunk.js"
+    "static/js/main.041e2faf.chunk.js"
   ]
 }
