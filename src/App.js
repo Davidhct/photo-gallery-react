@@ -41,10 +41,10 @@ class App extends Component {
   }
 
   handleChange = (event) => {
-    let val = event.target.value;
+    let val = event.target.value.trim();
     this.setState({ searchField: val });
     if (val === "") {
-      this.setState({ photos: [], page: 0 });
+      this.setState({ photos: [], page: 0, more: false });
     } else {
       this.setState({ searchValue: val, page: 1 });
 
