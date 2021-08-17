@@ -8,7 +8,6 @@ import { Dnd } from "./components/dnd/dnd.component";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { Loader } from "./components/loader/loader.component";
 import "./App.css";
-require("dotenv").config();
 
 class App extends Component {
   constructor() {
