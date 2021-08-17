@@ -20,7 +20,7 @@ class App extends Component {
       searchField: "",
       searchValue: "",
       apiUrl: "https://pixabay.com/api",
-      apiKey: "22698874-5e3ff1ef81847d81571af2bbf",
+      accessKey: process.env.REACT_APP_ACCESSKEY,
       rotation: 0,
       showModal: false,
       rotId: 0,
@@ -49,7 +49,7 @@ class App extends Component {
       this.setState({ searchValue: val, page: 1 });
 
       fetch(
-        `${this.state.apiUrl}/?key=${this.state.apiKey}&q=${this.state.searchValue}&image_type=photo&page=${this.state.page}&per_page=30`
+        `${this.state.apiUrl}/?key=${this.state.accessKey}&q=${this.state.searchValue}&image_type=photo&page=${this.state.page}&per_page=30`
       )
         .then((res) => res.json())
         .then((data) => {
@@ -87,7 +87,7 @@ class App extends Component {
     let arr = this.state.photos;
     let moreData = arr;
     fetch(
-      `${this.state.apiUrl}/?key=${this.state.apiKey}&q=${this.state.searchValue}&image_type=photo&page=${this.state.page}&per_page=30`
+      `${this.state.apiUrl}/?key=${this.state.accessKey}&q=${this.state.searchValue}&image_type=photo&page=${this.state.page}&per_page=30`
     )
       .then((res) => {
         if (!res.ok)
@@ -139,6 +139,7 @@ class App extends Component {
     this.setState({ photos: images, draggable: flag });
 
   dndUpdateStartPhoto = (photo) => this.setState({ startPhoto: photo });
+
   render() {
     const images = this.state.photos.map((photo, index) => {
       let newStyle;
@@ -226,11 +227,3 @@ class App extends Component {
 }
 
 export default App;
-//<img
-//   onClick={this.toggleDraggable}
-//   className={`drag-btn ${
-//     this.state.draggable ? "draggable-btn" : "not-draggable-btn"
-//   }`}
-//   src={dragBtn}
-//   alt="draggable button"
-// />
