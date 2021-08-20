@@ -1,6 +1,6 @@
 # Photo Gallery application
 
-## Responsive photo gallery application using Pixabay's API and random background from Unsplash's API.
+## Responsive photo gallery application using Pixabay API's and random background from Unsplash API's.
 
 ### Summary
 
